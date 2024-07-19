@@ -26,8 +26,7 @@ pkg install ncurses-utils -y &>/dev/null
 pkg install hashdeep -y &>/dev/null
 pkg install termux-x11-nightly -y &>/dev/null
 
-sleep 2
-echo -e "\e[36m[+] extracting files
+
 clear
 pkg install wget -y
 pkg install git -y
@@ -41,8 +40,7 @@ sleep 2
 
 
 clear
-sleep 2
-echo -e "\e[36m[+] setting up android tools
+
 pkg install android-tools -y
 sleep 2
 echo -e "\e[36m[+] android tools succefully installed
