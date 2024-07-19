@@ -50,20 +50,27 @@ sleep 2
 echo -e "\e[36m[+] Installing Termux-am\e[0m"
 pkg install termux-am -y &>/dev/null
 echo -e "\e[32m[✓] Termux-am Installed Successfully\e[0m"
-echo -e "\n"
-
-
+if [ -e $PREFIX/glibc ]; then
+    echo -n "Removing previous glibc. Continue? (Y/n) "
+    read i
+    if [ "$i" = "Y" ] || [ "$i" = "y" ]; then
+        rm -rf $PREFIX/glibc
+    else
+        return 1
+    fi
+fi
 
 INSTALL_WOW64=0
 
 echo "Select an option"
-echo "1) Install boxvidra with box86 build (alpha)"
-echo "2) Install boxvidra with wow64 build (completed)
+echo "1) Install boxvidra with box86 build (6 June)"
+echo "2) Install boxvidra with wow64 build (Complete version)"
 echo ""
 echo -n "Selected number: "
 read i
-pkg install x11-repo
+case "$i" in
 1)
+
     echo -e "\e[36m[+] Installing winelator Box86 build\e[0m"
     wget -q --show-progress -O /data/data/com.termux/files/usr/glibc.box86.tar.xz https://github.com/AGENT404TRD/BOXVIDRA-EMULATOR/releases/download/Glibc/glibc.box86.tar.xz
     sleep 2
