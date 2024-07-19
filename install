@@ -61,8 +61,8 @@ echo -e "\e[36m[+] select one
 INSTALL_WOW64=0
 
 echo "Select an option"
-echo "1) Install boxvidra with box86 build (beta)"
-echo "2) Install boxvidra with wow64 build "
+echo "1) Install boxvidra with box86 build (alpha)"
+echo "2) Install boxvidra with wow64 build (completed)
 echo ""
 echo -n "Selected number: "
 read i
