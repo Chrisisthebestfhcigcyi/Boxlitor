@@ -1,0 +1,255 @@
+clear
+
+
+sleep 2
+echo -e "\e[36m[+] Installing packages\e[0m"
+pkg install git -y
+pkg install hashdeep -y
+pkg update -y
+termux-setup-storage
+termux-change-repo
+
+apt-get clean
+apt-get update >/dev/null 2>&1
+apt-get -y --with-new-pkgs -o Dpkg::Options::="--force-confdef" upgrade >/dev/null 2>&1
+pkg install x11-repo -y &>/dev/null
+pkg install pulseaudio -y &>/dev/null
+pkg install xwayland -y &>/dev/null
+pkg install wget -y &>/dev/null
+pkg install tsu -y &>/dev/null
+pkg install root-repo -y &>/dev/null
+pkg install patchelf -y &>/dev/null
+pkg install p7zip -y &>/dev/null
+pkg install xorg-xrandr -y &>/dev/null
+pkg install ncurses-utils -y &>/dev/null
+pkg install hashdeep -y &>/dev/null
+pkg install termux-x11-nightly -y &>/dev/null
+
+sleep 2
+echo -e "\e[36m[+] extracting files
+clear
+pkg install wget -y
+pkg install git -y
+pkg install hashdeep -y
+clear
+sleep 2
+
+echo -e "\e[33m[i] Setting up storage permissions..\e[0m"
+yes | termux-setup-storage &>/dev/null
+sleep 2
+
+
+clear
+sleep 2
+echo -e "\e[36m[+] setting up android tools
+pkg install android-tools -y
+sleep 2
+echo -e "\e[36m[+] android tools succefully installed
+clear
+sleep 2
+
+echo -e "\e[36m[+] Installing Termux-am\e[0m"
+pkg install termux-am -y &>/dev/null
+echo -e "\e[32m[✓] Termux-am Installed Successfully\e[0m"
+echo -e "\n"
+sleep 2
+echo -e "\e[36m[+] if you have installed this but it crashed clear the termux data
+sleep 2
+echo -e "\e[36m[+] select one
+
+INSTALL_WOW64=0
+
+echo "Select an option"
+echo "1) Install boxvidra with box86 build (beta)"
+echo "2) Install boxvidra with wow64 build "
+echo ""
+echo -n "Selected number: "
+read i
+pkg install x11-repo
+1)
+    echo -e "\e[36m[+] Installing winelator Box86 build\e[0m"
+    wget -q --show-progress -O /data/data/com.termux/files/usr/glibc.box86.tar.xz https://github.com/AGENT404TRD/BOXVIDRA-EMULATOR/releases/download/Glibc/glibc.box86.tar.xz
+    sleep 2
+    echo -e "\e[33m[i] Extracting Box86 build glibc...\e[0m"
+    tar -xf /data/data/com.termux/files/usr/glibc.box86.tar.xz -C /data/data/com.termux/files/usr/
+    cp /data/data/com.termux/files/usr/glibc/opt/scripts/boxvidra /data/data/com.termux/files/usr/bin
+    cp /data/data/com.termux/files/usr/glibc/opt/scripts/vidra /data/data/com.termux/files/usr/bin
+    chmod +x /data/data/com.termux/files/usr/glibc/opt/scripts/*
+    chmod 777 /data/data/com.termux/files/usr/bin/boxvidra
+    chmod 777 /data/data/com.termux/files/usr/bin/boxvidra
+    rm /data/data/com.termux/files/usr/glibc.box86.tar.xz
+    echo -e "\n"
+    echo -e "\e[32m[✓] winelator Box86 build Installed Successfully.\e[0m"
+    ;;
+2)
+    echo -e "\e[36m[+] Installing winelator Wow64 build\e[0m"
+    wget -q --show-progress -O /data/data/com.termux/files/usr/glibc.wow64.tar.xz https://github.com/AGENT404TRD/BOXVIDRA-EMULATOR/releases/download/Glibc/glibc.wow64.tar.xz
+    sleep 2
+    echo -e "\e[33m[i] Extracting Wow64 build glibc...\e[0m"
+    tar -xf /data/data/com.termux/files/usr/glibc.wow64.tar.xz -C /data/data/com.termux/files/usr/
+    cp /data/data/com.termux/files/usr/glibc/opt/scripts/boxvidra /data/data/com.termux/files/usr/bin
+    chmod +x /data/data/com.termux/files/usr/glibc/opt/scripts/*
+    chmod 777 /data/data/com.termux/files/usr/bin/boxvidra
+    rm /data/data/com.termux/files/usr/glibc.wow64.tar.xz
+    echo -e "\n"
+    echo -e "\e[32m[✓] winelator Wow64 build Installed Successfully.\e[0m"
+    ;;
+*)
+    return 1
+    ;;
+esac
+
+clear
+echo -e "\e[36m[+] Installing Xfce,and,Tools\e[0m"
+echo -e "\n"
+pkg install xfce4 -y
+apt install xfce4-whiskermenu-plugin -y
+apt install xfce4-screenshooter -y
+apt install xfce4-taskmanager -y
+apt install xfce4-docklike-plugin -y
+apt install matchbox-keyboard -y
+echo -e "\e[32m[✓] Xfce4,  Tools, Packages, Installed Successfully.\e[0m"
+echo -e "\n"
+sleep 3
+clear
+pkg install chrome -y
+
+sleep 2
+echo -e "\e[36m[+] subscribe to littlebodybigfan188 on youtube!
+
+echo -e "\e[36m[+] Installing Winelator Emulator Programs, Browsers, Etc..\e[0m"
+echo -e "\n"
+pkg install gimp -y
+pkg install mpv -y
+pkg install firefox -y
+pkg install vlc -y
+pkg install vlc-qt -y
+pkg install abiword -y
+apt install ristretto -y
+echo -e "\n"
+echo -e "\e[32m[✓] Winelator Emulator Programs, Browsers, Other Applications Installed Successfully.\e[0m"
+clear
+sleep 3
+
+# CREATE DESKTOP FILE
+if [ ! -d ~/Desktop ]; then
+    mkdir -p ~/Desktop
+fi
+
+echo "Select a Theme to Download/Install"
+echo "1) Windows 10 Light Theme"
+echo "2) Windows 10 Dark Theme"
+echo "3) Windows 10 Red, Gaming Theme"
+echo "4) Windows 10 Purple, Space Theme"
+echo ""
+echo -n "Selected number : "
+read i
+case "$i" in
+1)
+   echo -n "Installing Windows 10 theme (Light) ..."
+
+   wget -q --show-progress -O Windows.10.Light.tar.xz https://github.com/AGENT404TRD/BOXVIDRA-EMULATOR/releases/download/Themes/Windows.10.Light.tar.xz
+   tar -xf Windows.10.Light.tar.xz
+   cd 'Windows 10 Light'
+   cp -r .icons /data/data/com.termux/files/home/
+   cp -r .themes /data/data/com.termux/files/home/
+   cp -r APPLICATIONS /data/data/com.termux/files/home
+   cp .config.tar.xz /data/data/com.termux/files/home
+   tar -xf /data/data/com.termux/files/home/.config.tar.xz -C /data/data/com.termux/files/home
+   cp Windows-10-master.zip /data/data/com.termux/files/usr/share/icons
+   unzip /data/data/com.termux/files/usr/share/icons/Windows-10-master.zip -d /data/data/com.termux/files/usr/share/icons
+   cp -r WALLPAPERS /data/data/com.termux/files/home
+   cp -r BOXVIDRA-CFG /data/data/com.termux/files/home
+   cp PROGRAMS/* /data/data/com.termux/files/home/Desktop
+   rm /data/data/com.termux/files/home/.config.tar.xz
+   cd 'PROGRAMS'
+   cd ..
+   rm -r 'Windows 10 Light'
+   rm Windows.10.Light.tar.xz
+   clear
+   echo -n "Windows 10 theme (Light) Installed Successfully"
+   sleep 3
+    ;;
+2)
+   echo -n "Installing Windows 10 theme (Dark) ..."
+
+   wget -q --show-progress -O Windows.10.Dark.tar.xz https://github.com/AGENT404TRD/BOXVIDRA-EMULATOR/releases/download/Themes/Windows.10.Dark.tar.xz
+   tar -xf Windows.10.Dark.tar.xz
+   cd 'Windows 10 Dark'
+   cp -r .icons /data/data/com.termux/files/home/
+   cp -r .themes /data/data/com.termux/files/home/
+   cp -r APPLICATIONS /data/data/com.termux/files/home
+   cp .config.tar.xz /data/data/com.termux/files/home
+   tar -xf /data/data/com.termux/files/home/.config.tar.xz -C /data/data/com.termux/files/home
+   cp Windows-10-master.zip /data/data/com.termux/files/usr/share/icons
+   unzip /data/data/com.termux/files/usr/share/icons/Windows-10-master.zip -d /data/data/com.termux/files/usr/share/icons
+   cp -r WALLPAPERS /data/data/com.termux/files/home
+   cp -r BOXVIDRA-CFG /data/data/com.termux/files/home
+   cp PROGRAMS/* /data/data/com.termux/files/home/Desktop
+   rm /data/data/com.termux/files/home/.config.tar.xz
+   cd ..
+   rm -r 'Windows 10 Dark'
+   rm Windows.10.Dark.tar.xz
+   clear
+   echo -n "Windows 10 theme (Dark) Installed Successfully"
+   sleep 3
+   ;;
+3)
+   echo -n "Installing Windows 10 theme (Red, Gaming) ..."
+
+   wget -q --show-progress -O Windows.10.Red.tar.xz https://github.com/AGENT404TRD/BOXVIDRA-EMULATOR/releases/download/Themes/Windows.10.Red.tar.xz
+   tar -xf Windows.10.Red.tar.xz
+   cd 'Windows 10 Red'
+   cp -r .icons /data/data/com.termux/files/home/
+   cp -r .themes /data/data/com.termux/files/home/
+   cp -r APPLICATIONS /data/data/com.termux/files/home
+   cp .config.tar.xz /data/data/com.termux/files/home
+   tar -xf /data/data/com.termux/files/home/.config.tar.xz -C /data/data/com.termux/files/home
+   cp Windows-10-master.zip /data/data/com.termux/files/usr/share/icons
+   unzip /data/data/com.termux/files/usr/share/icons/Windows-10-master.zip -d /data/data/com.termux/files/usr/share/icons
+   cp -r WALLPAPERS /data/data/com.termux/files/home
+   cp -r BOXVIDRA-CFG /data/data/com.termux/files/home
+   cp PROGRAMS/* /data/data/com.termux/files/home/Desktop
+   rm /data/data/com.termux/files/home/.config.tar.xz
+   cd ..
+   rm -r 'Windows 10 Red'
+   rm Windows.10.Red.tar.xz
+   clear
+   echo -n "Windows 10 theme (Red, Gaming) Installed Successfully"
+   sleep 3
+   ;;
+4)
+   echo -n "Installing Windows 10 theme (Purple, Space) ..."
+
+   wget -q --show-progress -O Windows.10.Purple.tar.xz https://github.com/AGENT404TRD/BOXVIDRA-EMULATOR/releases/download/Themes/Windows.10.Purple.tar.xz
+   tar -xf Windows.10.Purple.tar.xz
+   cd 'Windows 10 Purple'
+   cp -r .icons /data/data/com.termux/files/home/
+   cp -r .themes /data/data/com.termux/files/home/
+   cp -r APPLICATIONS /data/data/com.termux/files/home
+   cp .config.tar.xz /data/data/com.termux/files/home
+   tar -xf /data/data/com.termux/files/home/.config.tar.xz -C /data/data/com.termux/files/home
+   cp Windows-10-master.zip /data/data/com.termux/files/usr/share/icons
+   unzip /data/data/com.termux/files/usr/share/icons/Windows-10-master.zip -d /data/data/com.termux/files/usr/share/icons
+   cp -r WALLPAPERS /data/data/com.termux/files/home
+   cp -r BOXVIDRA-CFG /data/data/com.termux/files/home
+   cp PROGRAMS/* /data/data/com.termux/files/home/Desktop
+   rm /data/data/com.termux/files/home/.config.tar.xz
+   cd ..
+   rm -r 'Windows 10 Purple'
+   rm Windows.10.Purple.tar.xz
+   clear
+   echo -n "Windows 10 theme (Purple, Space) Installed Successfully"
+   sleep 3
+   ;;
+*)
+   echo "Invalid option, please select a valid number."
+   ;;
+esac
+    
+clear
+sleep 2
+
+echo -e "\e[32m[✓] Winelator Emulator Installed Successfully.\e[0m"
+echo -e "\n"
+echo "Type \"winelator\" To Start"
