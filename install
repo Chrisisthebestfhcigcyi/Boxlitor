@@ -3,7 +3,7 @@
 
 clear
 sleep 2
-echo -e "\e[36m[+] Installing packages\e[0m"
+echo -e "\e[36m[+] Installing packages for boxlitor\e[0m"
 pkg install git -y
 pkg install hashdeep -y
 pkg update -y
@@ -11,7 +11,7 @@ termux-setup-storage
 termux-change-repo
 
 apt-get clean
-apt-get update >/dev/null 2>&1
+apt-get update
 apt-get -y --with-new-pkgs -o Dpkg::Options::="--force-confdef" upgrade >/dev/null 2>&1
 pkg install x11-repo -y &>/dev/null
 pkg install pulseaudio -y &>/dev/null
@@ -28,22 +28,21 @@ pkg install termux-x11-nightly -y &>/dev/null
 
 
 clear
-pkg install wget -y
-pkg install git -y
-pkg install hashdeep -y
+pkg install wget
+pkg install git 
+pkg install hashdeep
 clear
 sleep 2
 
 echo -e "\e[33m[i] Setting up storage permissions..\e[0m"
-yes | termux-setup-storage &>/dev/null
+yes | termux-setup-storage
 sleep 2
 
 
 clear
 
-pkg install android-tools -y
+pkg install android-tools
 sleep 2
-echo -e "\e[36m[+] android tools succefully installed
 clear
 sleep 2
 
