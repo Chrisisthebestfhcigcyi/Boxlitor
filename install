@@ -40,6 +40,7 @@ sleep 2
 
 
 clear
+Sleep 2
 
 pkg install android-tools
 sleep 2
@@ -47,6 +48,7 @@ clear
 sleep 2
 
 echo -e "\e[36m[+] Installing Termux-am\e[0m"
+Sleep 2
 pkg install termux-am -y &>/dev/null
 echo -e "\e[32m[✓] Termux-am Installed Successfully\e[0m"
 if [ -e $PREFIX/glibc ]; then
