@@ -63,15 +63,15 @@ fi
 INSTALL_WOW64=0
 
 echo "Select an option"
-echo "1) Install boxvidra with box86 build (alpha version)"
-echo "2) Install boxvidra with wow64 build (beta version)"
+echo "1) Install boxlitor with box86 build (alpha version)"
+echo "2) Install boxlitor with wow64 build (beta version)"
 echo ""
 echo -n "Selected number: "
 read i
 case "$i" in
 1)
 
-    echo -e "\e[36m[+] Installing winelator Box86 build\e[0m"
+    echo -e "\e[36m[+] Installing boxlitor Box86 build\e[0m"
     wget -q --show-progress -O /data/data/com.termux/files/usr/glibc.box86.tar.xz https://github.com/AGENT404TRD/BOXVIDRA-EMULATOR/releases/download/Glibc/glibc.box86.tar.xz
     sleep 2
     echo -e "\e[33m[i] Extracting Box86 build glibc...\e[0m"
@@ -83,10 +83,10 @@ case "$i" in
     chmod 777 /data/data/com.termux/files/usr/bin/boxvidra
     rm /data/data/com.termux/files/usr/glibc.box86.tar.xz
     echo -e "\n"
-    echo -e "\e[32m[✓] winelator Box86 build Installed Successfully.\e[0m"
+    echo -e "\e[32m[✓] boxlitor Box86 build Installed Successfully.\e[0m"
     ;;
 2)
-    echo -e "\e[36m[+] Installing winelator Wow64 build\e[0m"
+    echo -e "\e[36m[+] Installing boxlitor Wow64 build\e[0m"
     wget -q --show-progress -O /data/data/com.termux/files/usr/glibc.wow64.tar.xz https://github.com/AGENT404TRD/BOXVIDRA-EMULATOR/releases/download/Glibc/glibc.wow64.tar.xz
     sleep 2
     echo -e "\e[33m[i] Extracting Wow64 build glibc...\e[0m"
@@ -96,7 +96,7 @@ case "$i" in
     chmod 777 /data/data/com.termux/files/usr/bin/boxvidra
     rm /data/data/com.termux/files/usr/glibc.wow64.tar.xz
     echo -e "\n"
-    echo -e "\e[32m[✓] winelator Wow64 build Installed Successfully.\e[0m"
+    echo -e "\e[32m[✓] boxlitor Wow64 build Installed Successfully.\e[0m"
     ;;
 *)
     return 1
@@ -131,7 +131,7 @@ pkg install vlc-qt -y
 pkg install abiword -y
 apt install ristretto -y
 echo -e "\n"
-echo -e "\e[32m[✓] Winelator Emulator Programs, Browsers, Other Applications Installed Successfully.\e[0m"
+echo -e "\e[32m[✓] boxlitor Emulator Programs, Browsers, Other Applications Installed Successfully.\e[0m"
 clear
 sleep 3
 
@@ -254,6 +254,6 @@ esac
 clear
 sleep 2
 
-echo -e "\e[32m[✓] Winelator Emulator Installed Successfully.\e[0m"
+echo -e "\e[32m[✓] boxlitor Emulator Installed Successfully.\e[0m"
 echo -e "\n"
-echo "Type \"winelator\" To Start"
+echo "Type \"boxlitor\" To Start"
