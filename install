@@ -51,10 +51,8 @@ echo -e "\e[36m[+] Installing Termux-am\e[0m"
 pkg install termux-am -y &>/dev/null
 echo -e "\e[32m[✓] Termux-am Installed Successfully\e[0m"
 echo -e "\n"
-sleep 2
-echo -e "\e[36m[+] if you have installed this but it crashed clear the termux data
-sleep 2
-echo -e "\e[36m[+] select one
+
+
 
 INSTALL_WOW64=0
 
@@ -114,7 +112,7 @@ clear
 pkg install chrome -y
 
 sleep 2
-echo -e "\e[36m[+] subscribe to littlebodybigfan188 on youtube!
+echo -e "\e[36m[+] subscribe to littlebodybigfan188 on youtube!Etc..\e[0m"
 
 echo -e "\e[36m[+] Installing Winelator Emulator Programs, Browsers, Etc..\e[0m"
 echo -e "\n"
