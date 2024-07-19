@@ -1,0 +1,5 @@
+pkg install tsu
+sudo apt update
+sudo apt upgrade
+sudo apt-get steam
+sudo apt-get jre8
