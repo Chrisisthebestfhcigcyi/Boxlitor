@@ -1,5 +1,1 @@
-termux-change-repo
-pkg install wget -y
-clear
-sleep 2
-termux-setup-storage
+
