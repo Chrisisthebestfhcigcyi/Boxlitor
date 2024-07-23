@@ -1,4 +1,7 @@
 pkg install wget
 pkg install android-tools
 clear
+rm ~/x
 
+echo "Setting up storage permision...
+termux-setup-storage
