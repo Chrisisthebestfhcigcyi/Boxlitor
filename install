@@ -2,4 +2,4 @@ pkg install wget
 pkg install android-tools
 clear
 sleep 2
-echo -e "\e[36m[+] setting up storage permision...
+echo -e "\e[36m[+] setting up storage permision...\e[0m
