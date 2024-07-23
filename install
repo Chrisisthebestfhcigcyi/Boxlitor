@@ -1,6 +1,5 @@
 termux-change-repo
-pkg install wget
-pkg install android-tools
+pkg install wget -y
 clear
 sleep 2
 termux-setup-storage
